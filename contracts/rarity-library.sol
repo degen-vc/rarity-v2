@@ -185,6 +185,7 @@ interface IERC721Enumerable is IERC721 {
 
 library rl {
     struct _base {
+        string name;
         uint xp;
         uint log;
         uint class;
@@ -242,13 +243,19 @@ library rl {
         _skills skills;
         _gold gold;
         _material[] materials;
+        _misc misc;
     }
 
     struct _item1 {
+        uint token_id;
         uint8 base_type;
         uint8 item_type;
         uint32 crafted;
         uint crafter;
+    }
+
+    struct _misc {
+        uint daycare_days_paid;
     }
 
 }
@@ -321,6 +328,10 @@ interface rarity_item1 is IERC721Enumerable {
     function items(uint) external view returns (uint8, uint8, uint32, uint);
 }
 
+interface rarity_daycare {
+    function daysPaid(uint _summoner) external view returns (uint days_paid);
+}
+
 
 contract rarity_library {
     using Strings for uint;
@@ -331,16 +342,31 @@ contract rarity_library {
     rarity_gold public         _gold = rarity_gold(0x7303E7a860DAFfE4d0b33615479648cb3496903b);
     rarity_mat1 public         _mat1 = rarity_mat1(0xEF4C8E18c831cB7C937A0D17809102208570eC8F);
     rarity_item1 public        _items1 = rarity_item1(0x7d022B9b34eaDC5E7507823EDe459347220EdA5D);
+    // rarity_names public        _names = rarity_names(address(0));
+    rarity_daycare public        _daycare = rarity_daycare(0xEDB8B4B6c0223dC91326f0F886CCc7FF6f5135a3);
+
+
+
+    function name(uint _s) public view returns (string memory summoner_name) {
+        summoner_name = '';
+        // summoner_name = _names.summoner_name(_s);
+    }
 
     function base(uint _s) public view returns (rl._base memory c) {
         (uint _xp, uint _log, uint _class, uint _level) = _rm.summoner(_s);
-        c = rl._base(_xp, _log, _class, _level);
+        c = rl._base(name(_s), _xp, _log, _class, _level);
     }
 
     function description(uint _s) public view returns (string memory full_name) {
         (,,uint class, uint level) = _rm.summoner(_s);
         full_name = string(abi.encodePacked("Level ", level.toString(), " ", _rm.classes(class)));
-        full_name = string(abi.encodePacked("Unnamed ", full_name));
+
+        string memory _name = name(_s);
+        if (bytes(_name).length > 0) {
+            full_name = string(abi.encodePacked(_name, ", ", full_name));
+        } else {
+            full_name = string(abi.encodePacked("Unnamed ", full_name));
+        }
     }
 
     function ability_scores(uint _s) public view returns (rl._ability_scores memory scores) {
@@ -438,13 +464,18 @@ contract rarity_library {
         mats[0] = rl._material(_mat1.balanceOf(_s), _mat1.scout(_s), _mat1.adventurers_log(_s));
     }
 
+    function misc(uint _s) public view returns (rl._misc memory m) {
+        m.daycare_days_paid = _daycare.daysPaid(_s);
+    }
+
     function summoner_full(uint _s) public view returns (rl._summoner memory s) {
         s = rl._summoner(
             base(_s),
             ability_scores_full(_s),
             skills(_s),
             gold(_s),
-            materials(_s)
+            materials(_s),
+            misc(_s)
         );
     }
 
@@ -459,8 +490,9 @@ contract rarity_library {
         uint _total_items = _items1.balanceOf(_owner);
         items = new rl._item1[](_total_items);
         for (uint i = 0; i < _total_items; i++) {
-            (uint8 _base_type, uint8 _item_type, uint32 _crafted, uint _crafter) = _items1.items(_items1.tokenOfOwnerByIndex(_owner, i));
-            items[i] = rl._item1(_base_type, _item_type, _crafted, _crafter);
+            uint token_id = _items1.tokenOfOwnerByIndex(_owner, i);
+            (uint8 _base_type, uint8 _item_type, uint32 _crafted, uint _crafter) = _items1.items(token_id);
+            items[i] = rl._item1(token_id, _base_type, _item_type, _crafted, _crafter);
         }
     }
 }
