@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
@@ -100,10 +102,6 @@ contract ERC721 is ERC165, IERC721 {
         address owner = _owners[tokenId];
         require(owner != address(0), "ERC721: owner query for nonexistent token");
         return owner;
-    }
-
-    function _baseURI() internal view virtual returns (string memory) {
-        return "";
     }
 
     function approve(address to, uint256 tokenId) public virtual override {
@@ -454,7 +452,9 @@ interface codex_base_random {
     function d20(uint _summoner) external view returns (uint);
 }
 
-contract rarity_crafting is ERC721Enumerable {
+contract rarity_crafting is Ownable, ERC721Enumerable {
+    using Strings for uint256;
+    string public baseMetadataURI;
     uint public next_item;
     uint constant craft_xp_per_day = 250e18;
 
@@ -486,6 +486,10 @@ contract rarity_crafting is ERC721Enumerable {
         uint8 item_type;
         uint32 crafted;
         uint crafter;
+    }
+
+    function setBaseMetadataURI(string memory _newBaseMetadataURI) external onlyOwner {
+        baseMetadataURI = _newBaseMetadataURI;
     }
 
     function _isApprovedOrOwner(uint _summoner) internal view returns (bool) {
@@ -610,90 +614,9 @@ contract rarity_crafting is ERC721Enumerable {
         }
     }
 
-    function tokenURI(uint _item) public view returns (string memory uri) {
-        uint _base_type = items[_item].base_type;
-        if (_base_type == 1) {
-            return get_token_uri_goods(_item);
-        } else if (_base_type == 2) {
-            return get_token_uri_armor(_item);
-        } else if (_base_type == 3) {
-            return get_token_uri_weapon(_item);
-        }
-    }
-
-    function get_token_uri_goods(uint _item) public view returns (string memory output) {
-        item memory _data = items[_item];
-        {
-            (,
-                uint _cost,
-                uint _weight,
-                string memory _name,
-                string memory _description
-            ) = _goods.item_by_id(_data.item_type);
-            output = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: white; font-family: serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="black" /><text x="10" y="20" class="base">';
-            output = string(abi.encodePacked(output, "category ", get_type(_data.base_type), '</text><text x="10" y="40" class="base">'));
-            output = string(abi.encodePacked(output, "name ", _name, '</text><text x="10" y="60" class="base">'));
-            output = string(abi.encodePacked(output, "cost ", toString(_cost/1e18), "gp", '</text><text x="10" y="80" class="base">'));
-            output = string(abi.encodePacked(output, "weight ", toString(_weight), "lb", '</text><text x="10" y="100" class="base">'));
-            output = string(abi.encodePacked(output, "description ", _description, '</text><text x="10" y="120" class="base">'));
-            output = string(abi.encodePacked(output, "crafted by ", toString(_data.crafter), '</text><text x="10" y="140" class="base">'));
-            output = string(abi.encodePacked(output, "crafted at ", toString(_data.crafted), '</text></svg>'));
-        }
-        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "item #', toString(_item), '", "description": "Rarity tier 1, non magical, item crafting.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
-
-        return output;
-    }
-
-    function get_token_uri_armor(uint _item) public view returns (string memory output) {
-        item memory _data = items[_item];
-        {
-            (,
-                uint _cost,
-                uint _proficiency,
-                uint _weight,
-                uint _armor_bonus,
-                uint _max_dex_bonus,
-                int _penalty,
-                uint _spell_failure,
-                string memory _name,
-                string memory _description
-            ) = _armor.item_by_id(_data.item_type);
-            output = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: white; font-family: serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="black" /><text x="10" y="20" class="base">';
-            output = string(abi.encodePacked(output, "category ", get_type(_data.base_type), '</text><text x="10" y="40" class="base">'));
-            output = string(abi.encodePacked(output, "name ", _name, '</text><text x="10" y="60" class="base">'));
-            output = string(abi.encodePacked(output, "cost ", toString(_cost/1e18), "gp", '</text><text x="10" y="80" class="base">'));
-            output = string(abi.encodePacked(output, "weight ", toString(_weight), "lb", '</text><text x="10" y="100" class="base">'));
-            output = string(abi.encodePacked(output, "proficiency ", _armor.get_proficiency_by_id(_proficiency), '</text><text x="10" y="120" class="base">'));
-            output = string(abi.encodePacked(output, "armor bonus ", toString(_armor_bonus), '</text><text x="10" y="140" class="base">'));
-            output = string(abi.encodePacked(output, "max dex ", toString(_max_dex_bonus), '</text><text x="10" y="160" class="base">'));
-            output = string(abi.encodePacked(output, "penalty ", toString(_penalty), '</text><text x="10" y="180" class="base">'));
-            output = string(abi.encodePacked(output, "spell failure ", toString(_spell_failure), "%", '</text><text x="10" y="200" class="base">'));
-            output = string(abi.encodePacked(output, "description ", _description, '</text><text x="10" y="220" class="base">'));
-            output = string(abi.encodePacked(output, "crafted by ", toString(_data.crafter), '</text><text x="10" y="240" class="base">'));
-            output = string(abi.encodePacked(output, "crafted at ", toString(_data.crafted), '</text></svg>'));
-        }
-        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "item #', toString(_item), '", "description": "Rarity tier 1, non magical, item crafting.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
-    }
-
-    function get_token_uri_weapon(uint _item) public view returns (string memory output) {
-        item memory _data = items[_item];
-        {
-            codex_items_weapons.weapon memory _weapon = _weapons.item_by_id(_data.item_type);
-            output = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: white; font-family: serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="black" /><text x="10" y="20" class="base">';
-            output = string(abi.encodePacked(output, "category ", get_type(_data.base_type), '</text><text x="10" y="40" class="base">'));
-            output = string(abi.encodePacked(output, "name ", _weapon.name, '</text><text x="10" y="60" class="base">'));
-            output = string(abi.encodePacked(output, "cost ", toString(_weapon.cost/1e18), "gp", '</text><text x="10" y="80" class="base">'));
-            output = string(abi.encodePacked(output, "weight ", toString(_weapon.weight), "lb", '</text><text x="10" y="100" class="base">'));
-            output = string(abi.encodePacked(output, "proficiency ", _weapons.get_proficiency_by_id(_weapon.proficiency), '</text><text x="10" y="120" class="base">'));
-            output = string(abi.encodePacked(output, "encumbrance ", _weapons.get_encumbrance_by_id(_weapon.encumbrance), '</text><text x="10" y="140" class="base">'));
-            output = string(abi.encodePacked(output, "damage 1d", toString(_weapon.damage), " ", _weapons.get_damage_type_by_id(_weapon.damage_type), '</text><text x="10" y="160" class="base">'));
-            output = string(abi.encodePacked(output, "(modifier) x critical (", toString(_weapon.critical_modifier), ") x ", toString(_weapon.critical), '</text><text x="10" y="180" class="base">'));
-            output = string(abi.encodePacked(output, "range ", toString(_weapon.range_increment), "ft", '</text><text x="10" y="200" class="base">'));
-            output = string(abi.encodePacked(output, "description ", _weapon.description, '</text><text x="10" y="220" class="base">'));
-            output = string(abi.encodePacked(output, "crafted by ", toString(_data.crafter), '</text><text x="10" y="240" class="base">'));
-            output = string(abi.encodePacked(output, "crafted at ", toString(_data.crafted), '</text></svg>'));
-        }
-        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "item #', toString(_item), '", "description": "Rarity tier 1, non magical, item crafting.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
+    function tokenURI(uint256 tokenId) public view returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        return bytes(baseMetadataURI).length > 0 ? string(abi.encodePacked(baseMetadataURI, tokenId.toString())) : "";
     }
 
     function toString(int value) internal pure returns (string memory) {
