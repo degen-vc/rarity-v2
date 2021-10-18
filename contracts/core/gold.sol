@@ -1,19 +1,26 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 interface rarity {
     function level(uint) external view returns (uint);
     function getApproved(uint) external view returns (address);
     function ownerOf(uint) external view returns (address);
 }
 
-contract rarity_gold {
+contract rarity_gold is Ownable {
     string public constant name = "Scarcity Gold";
     string public constant symbol = "SGOLD";
     uint8 public constant decimals = 18;
 
     uint public totalSupply = 0;
 
+    int public paramA = 500e18;
+    int public paramB = 500e18;
+    int public paramC = 0;
+    int public paramD = 0;
+    
     rarity immutable rm;
 
     mapping(uint => mapping (uint => uint)) public allowance;
@@ -28,10 +35,12 @@ contract rarity_gold {
         rm = _rarity;
     }
 
-    function wealth_by_level(uint level) public pure returns (uint wealth) {
-        for (uint i = 1; i < level; i++) {
-            wealth += i * 1000e18;
-        }
+    function wealth_by_level(uint level) public view returns (uint wealth) {
+        if (level < 2) return 0;
+        int intLevel = int(level);
+        int intWealth = paramA * ((intLevel - 1) ** 2) + paramB * (intLevel - 1) + paramC + paramD / (intLevel - 1);
+        if (intWealth < 0) return 0;
+        return uint(intWealth);
     }
 
     function _isApprovedOrOwner(uint _summoner) internal view returns (bool) {
@@ -100,4 +109,12 @@ contract rarity_gold {
 
         emit Transfer(from, to, amount);
     }
+
+    function updateFormulaParams(int _a, int _b, int _c, int _d) external onlyOwner {
+        paramA = _a;
+        paramB = _b;
+        paramC = _c;
+        paramD = _d;
+    }
+
 }
