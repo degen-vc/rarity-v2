@@ -932,10 +932,6 @@ contract rarity  is Ownable, ERC721Enumerable {
         _baseMetadataURI = _newBaseMetadataURI;
     }
 
-    function baseURI() external view returns (string memory) {
-        return _baseURI();
-    }
-
     function adventure(uint _summoner) external {
         require(_isApprovedOrOwner(_msgSender(), _summoner));
         require(block.timestamp > adventurers_log[_summoner]);
@@ -977,6 +973,10 @@ contract rarity  is Ownable, ERC721Enumerable {
 
     function xp_required(uint curent_level) public pure returns (uint xp_to_next_level) {
         return curent_level ** 2 * 1000e18;
+    }
+
+    function baseTokenURI() public view returns (string memory) {
+        return _baseURI();
     }
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
