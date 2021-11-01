@@ -53,13 +53,6 @@ describe('Scarcity', function() {
     expect(await scarcity.tokenURI(0)).to.equal(`${uri}0`);
   });
 
-  it('should NOT be possible to get URI for not valid summoner ID', async ()=> {
-    const uri = 'test/';
-    await scarcity.setBaseMetadataURI(uri);
-    await scarcity.connect(user).summon(11);
-    await expect(scarcity.tokenURI(111)).to.be.revertedWith('ERC721Metadata: URI query for nonexistent token');
-  });
-
   it('should have minter address', async ()=> {
     await scarcity.connect(user).summon(1);
     expect(await scarcity.minters(0)).to.equal(user.address);

@@ -911,6 +911,8 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
 }
 
 contract rarity  is Ownable, ERC721Enumerable {
+    using Strings for uint256;
+
     uint public next_summoner;
     uint constant xp_per_day = 250e18;
     uint constant DAY = 1 days;
@@ -975,6 +977,11 @@ contract rarity  is Ownable, ERC721Enumerable {
 
     function xp_required(uint curent_level) public pure returns (uint xp_to_next_level) {
         return curent_level ** 2 * 1000e18;
+    }
+
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        string memory baseUri = _baseURI();
+        return string(abi.encodePacked(baseUri, tokenId.toString()));
     }
 
     function classes(uint id) public pure returns (string memory description) {
