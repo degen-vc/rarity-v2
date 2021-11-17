@@ -96,6 +96,29 @@ async function main() {
   const proxyMarket = await ProxyMarket.deploy(marketLogic.address, proxyAdmin.address, data);   
   await proxyMarket.deployed();
 
+  console.log("Deployed and not verified yet");
+  console.log("Scarcity deployed: ", scarcity.address);
+  console.log("NamesV3 deployed: ", namesV3.address);
+  console.log("Gold deployed: ", gold.address);
+  console.log("Attributes deployed: ", attributes.address);
+  console.log("Materials deployed: ", materials.address);
+  console.log("Codex skills deployed: ", codex_skills.address);
+  console.log("Codex class skills deployed: ", codex_class_skills.address);
+  console.log("Skills deployed: ", skills.address);
+  console.log("Codex base random deployed: ", codex_base_random.address);
+  console.log("Codex items goods deployed: ", codex_items_goods.address);
+  console.log("Codex items armor deployed: ", codex_items_armor.address);
+  console.log("Codex items weapons deployed: ", codex_items_weapons.address);
+  console.log("Codex feats-1 deployed: ", codex_feats_1.address);
+  console.log("Crafting deployed: ", crafting.address);
+  console.log("Wrapped gold deployed: ", wrapped_gold.address);
+  console.log("Adventure time deployed: ", adventure_time.address);
+  console.log("Daycare manager deployed: ", daycare_manager.address);
+  console.log("Library deployed: ", library.address);
+  console.log("ProxyAdmin deployed: ", proxyAdmin.address);
+  console.log("MarketLogic deployed: ", marketLogic.address);
+  console.log("ProxyMarket deployed: ", proxyMarket.address);
+
   await new Promise(resolve => setTimeout(resolve, 60000));
 
   await hardhat.run("verify:verify", {address: scarcity.address});
