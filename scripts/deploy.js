@@ -121,6 +121,32 @@ async function main() {
 
   await new Promise(resolve => setTimeout(resolve, 60000));
 
+  console.log(
+    `
+    await hardhat.run("verify:verify", {address: ${scarcity.address}});
+    await hardhat.run("verify:verify", {address: ${namesV3.address}, constructorArguments: [${scarcity.address}, ${PAYMENT_TOKEN}, ${NAME_BUY_PRICE_WEI}]});
+    await hardhat.run("verify:verify", {address: ${gold.address}, constructorArguments: [${scarcity.address}, ${namesV3.address}]});
+    await hardhat.run("verify:verify", {address: ${attributes.address}, constructorArguments: [${scarcity.address}]});
+    await hardhat.run("verify:verify", {address: ${materials.address}, constructorArguments: [${scarcity.address}, ${attributes.address}]});
+    await hardhat.run("verify:verify", {address: ${codex_skills.address}});
+    await hardhat.run("verify:verify", {address: ${codex_class_skills.address}, constructorArguments: [${codex_skills.address}]});
+    await hardhat.run("verify:verify", {address: ${skills.address}, constructorArguments: [${scarcity.address}, ${attributes.address}, ${codex_skills.address}]});
+    await hardhat.run("verify:verify", {address: ${codex_base_random.address}});
+    await hardhat.run("verify:verify", {address: ${codex_items_goods.address}});
+    await hardhat.run("verify:verify", {address: ${codex_items_armor.address}});
+    await hardhat.run("verify:verify", {address: ${codex_items_weapons.address}});
+    await hardhat.run("verify:verify", {address: ${codex_feats_1.address}});
+    await hardhat.run("verify:verify", {address: ${crafting.address}, constructorArguments: [${scarcity.address}, ${attributes.address}, ${materials.address}, ${gold.address}, ${skills.address}, ${codex_base_random.address}, ${codex_items_goods.address}, ${codex_items_armor.address}, ${codex_items_weapons.address}]});
+    await hardhat.run("verify:verify", {address: ${wrapped_gold.address}, constructorArguments: [${scarcity.address}, ${gold.address}]});
+    await hardhat.run("verify:verify", {address: ${adventure_time.address}, constructorArguments: [${scarcity.address}]});
+    await hardhat.run("verify:verify", {address: ${daycare_manager.address}, constructorArguments: [${adventure_time.address}]});
+    await hardhat.run("verify:verify", {address: ${library.address}, constructorArguments: [${scarcity.address}, ${attributes.address}, ${skills.address}, ${gold.address}, ${materials.address}, ${crafting.address}, ${namesV3.address}, ${codex_items_goods.address}, ${codex_items_armor.address}, ${codex_items_weapons.address}]});
+    await hardhat.run("verify:verify", {address: ${proxyAdmin.address}, contract: 'contracts/market/ProxyAdmin.sol:ProxyAdminImpl'});
+    await hardhat.run("verify:verify", {address: ${marketLogic.address}, contract: 'contracts/market/ScarcityCraftingIMarket.sol:RarityCraftingIMarket'});
+    await hardhat.run("verify:verify", {address: ${proxyMarket.address}, constructorArguments: [${marketLogic.address}, ${proxyAdmin.address}, ${data}], contract: 'contracts/market/ScarcityCraftingIMarketProxy.sol:RarityCraftingIMarketProxy'});
+    `
+  );
+
   await hardhat.run("verify:verify", {address: scarcity.address});
   await hardhat.run("verify:verify", {address: namesV3.address, constructorArguments: [scarcity.address, PAYMENT_TOKEN, NAME_BUY_PRICE_WEI]});
   await hardhat.run("verify:verify", {address: gold.address, constructorArguments: [scarcity.address, namesV3.address]});

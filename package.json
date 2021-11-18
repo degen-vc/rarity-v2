@@ -4,7 +4,8 @@
   "scripts": {
     "test": "hardhat test",
     "compile": "hardhat compile",
-    "deploy:matic": "hardhat run scripts/deploy.js --network matic"
+    "deploy:matic": "hardhat run scripts/deploy.js --network matic",
+    "verify:matic": "hardhat run scripts/verify.js --network matic"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.4.0"
