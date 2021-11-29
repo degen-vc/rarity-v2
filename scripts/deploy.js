@@ -57,9 +57,21 @@ async function main() {
   const codex_items_weapons = await Codex_items_weapons.deploy();
   await codex_items_weapons.deployed();
 
+  const Codex_gambits = await hardhat.ethers.getContractFactory('contracts/codex/codex-gambits.sol:gambits');
+  const codex_gambits = await Codex_gambits.deploy();
+  await codex_gambits.deployed();
+
   const Codex_feats_1 = await hardhat.ethers.getContractFactory('contracts/codex/codex-feats-1.sol:codex');
   const codex_feats_1 = await Codex_feats_1.deploy();
-  await codex_feats_1.deployed();
+  await codex_feats_1.deployed();  
+
+  const Codex_feats_2 = await hardhat.ethers.getContractFactory('contracts/codex/codex-feats-2.sol:codex');
+  const codex_feats_2 = await Codex_feats_2.deploy();
+  await codex_feats_2.deployed();
+
+  const Feats = await hardhat.ethers.getContractFactory('contracts/core/feats.sol:rarity_feats');
+  const feats = await Feats.deploy(scarcity.address, codex_feats_1.address, codex_feats_2.address);
+  await feats.deployed();
 
   const Crafting = await hardhat.ethers.getContractFactory('contracts/core/rarity_crafting_common.sol:rarity_crafting');
   const crafting = await Crafting.deploy(scarcity.address, attributes.address, materials.address, gold.address, skills.address, codex_base_random.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address);
@@ -109,7 +121,10 @@ async function main() {
   console.log("Codex items goods deployed: ", codex_items_goods.address);
   console.log("Codex items armor deployed: ", codex_items_armor.address);
   console.log("Codex items weapons deployed: ", codex_items_weapons.address);
+  console.log("Codex gambits deployed: ", codex_gambits.address);  
   console.log("Codex feats-1 deployed: ", codex_feats_1.address);
+  console.log("Codex feats-2 deployed: ", codex_feats_2.address);
+  console.log("Feats deployed: ", feats.address);
   console.log("Crafting deployed: ", crafting.address);
   console.log("Wrapped gold deployed: ", wrapped_gold.address);
   console.log("Adventure time deployed: ", adventure_time.address);
@@ -135,7 +150,10 @@ async function main() {
     await hardhat.run("verify:verify", {address: '${codex_items_goods.address}'});
     await hardhat.run("verify:verify", {address: '${codex_items_armor.address}'});
     await hardhat.run("verify:verify", {address: '${codex_items_weapons.address}'});
+    await hardhat.run("verify:verify", {address: '${codex_gambits.address}'});
     await hardhat.run("verify:verify", {address: '${codex_feats_1.address}'});
+    await hardhat.run("verify:verify", {address: '${codex_feats_2.address}'});
+    await hardhat.run("verify:verify", {address: '${feats.address}'});
     await hardhat.run("verify:verify", {address: '${crafting.address}', constructorArguments: ['${scarcity.address}', '${attributes.address}', '${materials.address}', '${gold.address}', '${skills.address}', '${codex_base_random.address}', '${codex_items_goods.address}', '${codex_items_armor.address}', '${codex_items_weapons.address}']});
     await hardhat.run("verify:verify", {address: '${wrapped_gold.address}', constructorArguments: ['${scarcity.address}', '${gold.address}']});
     await hardhat.run("verify:verify", {address: '${adventure_time.address}', constructorArguments: ['${scarcity.address}']});
@@ -159,7 +177,10 @@ async function main() {
   await hardhat.run("verify:verify", {address: codex_items_goods.address});
   await hardhat.run("verify:verify", {address: codex_items_armor.address});
   await hardhat.run("verify:verify", {address: codex_items_weapons.address});
+  await hardhat.run("verify:verify", {address: codex_gambits.address});
   await hardhat.run("verify:verify", {address: codex_feats_1.address});
+  await hardhat.run("verify:verify", {address: codex_feats_2.address});
+  await hardhat.run("verify:verify", {address: feats.address, constructorArguments: [scarcity.address, codex_feats_1.address, codex_feats_2.address]});
   await hardhat.run("verify:verify", {address: crafting.address, constructorArguments: [scarcity.address, attributes.address, materials.address, gold.address, skills.address, codex_base_random.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address]});
   await hardhat.run("verify:verify", {address: wrapped_gold.address, constructorArguments: [scarcity.address, gold.address]});
   await hardhat.run("verify:verify", {address: adventure_time.address, constructorArguments: [scarcity.address]});
@@ -181,7 +202,10 @@ async function main() {
   console.log("Codex items goods deployed and verified to: ", codex_items_goods.address);
   console.log("Codex items armor deployed and verified to: ", codex_items_armor.address);
   console.log("Codex items weapons deployed and verified to: ", codex_items_weapons.address);
+  console.log("Codex gambits deployed and verified to: ", codex_gambits.address);
   console.log("Codex feats-1 deployed and verified to: ", codex_feats_1.address);
+  console.log("Codex feats-2 deployed and verified to: ", codex_feats_2.address);
+  console.log("Feats deployed and verified to: ", feats.address);
   console.log("Crafting deployed and verified to: ", crafting.address);
   console.log("Wrapped gold deployed and verified to: ", wrapped_gold.address);
   console.log("Adventure time deployed and verified to: ", adventure_time.address);
