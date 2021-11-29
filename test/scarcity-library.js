@@ -103,6 +103,7 @@ describe('scarcity-library', function() {
     expect(data.level).to.equal(1);
     expect(data.transferred).to.equal(false);
     expect(data.hasName).to.equal(false);
+    expect(data.summonerName).to.equal('');
     expect(data.current_skills).to.eql(empty_skill_set);
     expect(data.class_skills).to.eql(barbarian_skill_set);
     expect(data._str).to.equal(0);
@@ -146,6 +147,7 @@ describe('scarcity-library', function() {
     expect(data.level).to.equal(2);
     expect(data.transferred).to.equal(true);
     expect(data.hasName).to.equal(true);
+    expect(data.summonerName).to.equal('testname');
     expect(data.current_skills).to.eql(test_skill_set);
     expect(data.class_skills).to.eql(paladin_skill_set);
     expect(data._str).to.equal(8);
@@ -210,7 +212,7 @@ describe('scarcity-library', function() {
     expect(data.weight).to.equal(25);
     expect(data.gold_cost).to.equal(utils.parseEther('15'));
     expect(data.name).to.equal("Hide");
-    expect(data.description).to.equal('');
+    expect(data.description).to.equal('This armor is prepared from multiple layers of leather and animal hides. It is stiff and hard to move in. Druids, who only wear nonmetallic armor, favor hide.');
     expect(data.proficiency).to.equal("Medium");
     expect(data.encumbrance).to.equal('');
     expect(data.damage_type).to.equal('');

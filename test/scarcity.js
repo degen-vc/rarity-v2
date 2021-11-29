@@ -28,16 +28,16 @@ describe('Scarcity', function() {
 
   it('should be possible to set base URL for owner', async ()=> {
     const uri = 'test/';
-    expect(await scarcity.baseURI()).to.equal('');
+    expect(await scarcity.baseTokenURI()).to.equal('');
     await scarcity.setBaseMetadataURI(uri);
-    expect(await scarcity.baseURI()).to.equal(uri);
+    expect(await scarcity.baseTokenURI()).to.equal(uri);
   });
 
   it('should NOT be possible to set base URL for NOT owner', async ()=> {
     const uri = 'test/';
-    expect(await scarcity.baseURI()).to.equal('');
+    expect(await scarcity.baseTokenURI()).to.equal('');
     await expect(scarcity.connect(user).setBaseMetadataURI(uri)).to.be.revertedWith('Ownable: caller is not the owner');
-    expect(await scarcity.baseURI()).to.equal('');
+    expect(await scarcity.baseTokenURI()).to.equal('');
   });
 
   it('should be possible to mint new summoner and level up', async ()=> {

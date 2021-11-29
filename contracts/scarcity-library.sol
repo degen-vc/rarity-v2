@@ -190,6 +190,7 @@ library rl {
         uint level;
         bool transferred;
         bool hasName;
+        string summonerName;
         uint8[36] current_skills;
         bool[36] class_skills;
         uint32 _str; 
@@ -361,6 +362,7 @@ interface rarity_item1 is IERC721Enumerable {
 
 interface rarity_names is IERC721Enumerable {
     function summoner_to_name_id(uint _summoner) external view returns (uint id);
+    function summoner_name(uint summoner) external view returns (string memory name);
 }
 
 
@@ -608,6 +610,7 @@ contract rarity_library {
         (data.xp, data.class, data.level) = summonerBaseInfo(_s);
         data.transferred = summonerIsTransferred(_s);
         data.hasName = hasName(_s);
+        data.summonerName = _names.summoner_name(_s);
         (data.current_skills, data.class_skills) =  currentAndClassSkills(_s);
 
         (data._str, data._dex, data._con, data._int, data._wis, data._cha) = _attr.ability_scores(_s);
