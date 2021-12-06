@@ -926,7 +926,7 @@ contract rarity  is Ownable, ERC721Enumerable {
     event summoned(address indexed owner, uint class, uint summoner);
     event leveled(address indexed owner, uint level, uint summoner);
 
-    constructor() ERC721("Scarcity Manifested", "SM") {}
+    constructor() ERC721("Scarcity Adventurers", "SA") {}
 
     function setBaseMetadataURI(string memory _newBaseMetadataURI) external onlyOwner {
         _baseMetadataURI = _newBaseMetadataURI;
