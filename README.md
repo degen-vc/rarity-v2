@@ -1,5 +1,5 @@
 # Scarcity
-Scarcity is achieved via an active economy, summoners must level, gain feats, learn spells, to be able to craft gear. This allows for market driven rarity while allowing an ever growing economy.
+The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Adventurer, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.
 
 # Links
 

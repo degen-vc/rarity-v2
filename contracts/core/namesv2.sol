@@ -1356,7 +1356,7 @@ contract rarity_names is ERC721Enumerable {
             output = string(abi.encodePacked(output, "Level ", toString(_rm.level(summoner)), ' ', _rm.classes(_rm.class(summoner)), '</text><text x="10" y="40" class="base">'));
         }
         output = string(abi.encodePacked(output, names[name_id], '</text></svg>'));
-        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Rarity ERC721 names for summoners.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
+        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Scarcity ERC721 names for adventurers.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
     }
 
     function toString(int value) internal pure returns (string memory) {
