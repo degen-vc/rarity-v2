@@ -36,7 +36,7 @@ contract rarity_feats {
         return (1 <= feat && feat <= 99);
     }
     
-    function feat_by_id(uint _id) public pure returns (
+    function feat_by_id(uint _id) public view returns (
         uint id,
         string memory name,
         bool prerequisites,

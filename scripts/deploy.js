@@ -153,7 +153,7 @@ async function main() {
     await hardhat.run("verify:verify", {address: '${codex_gambits.address}'});
     await hardhat.run("verify:verify", {address: '${codex_feats_1.address}'});
     await hardhat.run("verify:verify", {address: '${codex_feats_2.address}'});
-    await hardhat.run("verify:verify", {address: '${feats.address}'});
+    await hardhat.run("verify:verify", {address: '${feats.address}', constructorArguments: ['${scarcity.address}', '${codex_feats_1.address}', '${codex_feats_2.address}']});
     await hardhat.run("verify:verify", {address: '${crafting.address}', constructorArguments: ['${scarcity.address}', '${attributes.address}', '${materials.address}', '${gold.address}', '${skills.address}', '${codex_base_random.address}', '${codex_items_goods.address}', '${codex_items_armor.address}', '${codex_items_weapons.address}']});
     await hardhat.run("verify:verify", {address: '${wrapped_gold.address}', constructorArguments: ['${scarcity.address}', '${gold.address}']});
     await hardhat.run("verify:verify", {address: '${adventure_time.address}', constructorArguments: ['${scarcity.address}']});
