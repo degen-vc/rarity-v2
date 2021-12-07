@@ -1232,7 +1232,7 @@ contract rarity_names is ERC721Enumerable {
     event NameUpdated(uint indexed name_id, string old_name, string new_name);
     event NameAssigned(uint indexed name_id, uint indexed previous_summoner, uint indexed new_summoner);
 
-    constructor(rarity_manifested _rarity, rarity_gold _rarity_gold, uint _keeper_id) ERC721("Scarcity Names", "names") {
+    constructor(rarity_manifested _rarity, rarity_gold _rarity_gold, uint _keeper_id) ERC721("Scarcity Names", "SN") {
         KEEPER_ID = _keeper_id;
         EXECUTOR_ID = _rarity.next_summoner();
         _rarity.summon(11);
@@ -1356,7 +1356,7 @@ contract rarity_names is ERC721Enumerable {
             output = string(abi.encodePacked(output, "Level ", toString(_rm.level(summoner)), ' ', _rm.classes(_rm.class(summoner)), '</text><text x="10" y="40" class="base">'));
         }
         output = string(abi.encodePacked(output, names[name_id], '</text></svg>'));
-        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Rarity ERC721 names for summoners.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
+        output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Scarcity ERC721 names for adventurers.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
     }
 
     function toString(int value) internal pure returns (string memory) {

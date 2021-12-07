@@ -135,7 +135,7 @@ contract rarity_attributes {
 
         output = string(abi.encodePacked(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
         }
-        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "summoner #', toString(_summoner), '", "description": "Rarity is achieved via an active economy, summoners must level, gain feats, learn spells, to be able to craft gear. This allows for market driven rarity while allowing an ever growing economy. Feats, spells, and summoner gear is ommitted as part of further expansions.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))));
+        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "adventurer #', toString(_summoner), '", "description": "The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Adventurer, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))));
         output = string(abi.encodePacked('data:application/json;base64,', json));
 
         return output;
