@@ -13,6 +13,7 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 | skills | [0x639bc6637e4b861C8DED7955b1c715A509Cef99c](https://polygonscan.com/address/0x639bc6637e4b861C8DED7955b1c715A509Cef99c) |
 | craft (I) | [0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2](https://polygonscan.com/address/0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2) |
 | crafting (I) | [0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb](https://polygonscan.com/address/0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb) |
+| feats | [0x441307912B7818f2cBfF049390D908902d9f7D93](https://polygonscan.com/address/0x441307912B7818f2cBfF049390D908902d9f7D93) |
 
 # Codex
 
@@ -25,6 +26,7 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 | Items (Goods) | [0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8](https://polygonscan.com/address/0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8) |
 | Items (Armor) | [0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B](https://polygonscan.com/address/0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B) |
 | Items (Weapons) | [0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82](https://polygonscan.com/address/0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82) |
+| Gambits | [0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f](https://polygonscan.com/address/0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f) |
 
 # Wrappers
 
@@ -38,8 +40,6 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 | :--- | :--- |
 | adventure time | [0x45298cdbd5e128c21B1D3bE99d3AC082334460aD](https://polygonscan.com/address/0x45298cdbd5e128c21B1D3bE99d3AC082334460aD) |
 | daycare manager | [0xbfBe30F37C721b93d38742A84f6B5481D39003Ba](https://polygonscan.com/address/0xbfBe30F37C721b93d38742A84f6B5481D39003Ba) |
-| gambits | [0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f](https://polygonscan.com/address/0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f) |
-| feats | [0x441307912B7818f2cBfF049390D908902d9f7D93](https://polygonscan.com/address/0x441307912B7818f2cBfF049390D908902d9f7D93) |
 | library | [0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e](https://polygonscan.com/address/0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e) |
 | proxy admin | [0x820A39DF28743047A09efCC4F540BB5A011fc143](https://polygonscan.com/address/0x820A39DF28743047A09efCC4F540BB5A011fc143) |
 | market logic | [0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1](https://polygonscan.com/address/0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1) |
