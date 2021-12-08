@@ -47,8 +47,8 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 
 # Links
 
-[https://scarcity.game](https://scarcity.game)
-[https://names.scarcity.game](https://names.scarcity.game)
+[scarcity.game](https://scarcity.game)
+[names.scarcity.game](https://names.scarcity.game)
 
 # Social
 
