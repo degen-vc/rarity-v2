@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
+import "@openzeppelin/contracts/access/Ownable.sol";
+
 /**
  * @dev Interface of the ERC165 standard, as defined in the
  * https://eips.ethereum.org/EIPS/eip-165[EIP].
@@ -122,16 +124,6 @@ interface IERC721Metadata is IERC721 {
      * @dev Returns the Uniform Resource Identifier (URI) for `tokenId` token.
      */
     function tokenURI(uint256 tokenId) external view returns (string memory);
-}
-
-abstract contract Context {
-    function _msgSender() internal view virtual returns (address) {
-        return msg.sender;
-    }
-
-    function _msgData() internal view virtual returns (bytes calldata) {
-        return msg.data;
-    }
 }
 
 /**
@@ -357,6 +349,8 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
     // Token symbol
     string private _symbol;
 
+    string internal _baseMetadataURI;
+
     mapping(uint256 => address) private _owners;
     mapping(address => uint256) private _balances;
     mapping(uint256 => address) private _tokenApprovals;
@@ -427,7 +421,7 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
      * by default, can be overriden in child contracts.
      */
     function _baseURI() internal view virtual returns (string memory) {
-        return "";
+        return _baseMetadataURI;
     }
 
     /**
@@ -916,7 +910,9 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
     }
 }
 
-contract rarity is ERC721Enumerable {
+contract rarity  is Ownable, ERC721Enumerable {
+    using Strings for uint256;
+
     uint public next_summoner;
     uint constant xp_per_day = 250e18;
     uint constant DAY = 1 days;
@@ -925,11 +921,16 @@ contract rarity is ERC721Enumerable {
     mapping(uint => uint) public adventurers_log;
     mapping(uint => uint) public class;
     mapping(uint => uint) public level;
+    mapping(uint => address) public minters;
 
     event summoned(address indexed owner, uint class, uint summoner);
     event leveled(address indexed owner, uint level, uint summoner);
 
-    constructor() ERC721("Scarcity Manifested", "SM") {}
+    constructor() ERC721("Scarcity Adventurers", "SA") {}
+
+    function setBaseMetadataURI(string memory _newBaseMetadataURI) external onlyOwner {
+        _baseMetadataURI = _newBaseMetadataURI;
+    }
 
     function adventure(uint _summoner) external {
         require(_isApprovedOrOwner(_msgSender(), _summoner));
@@ -964,6 +965,7 @@ contract rarity is ERC721Enumerable {
         uint _next_summoner = next_summoner;
         class[_next_summoner] = _class;
         level[_next_summoner] = 1;
+        minters[_next_summoner] = _msgSender(); 
         _safeMint(_msgSender(), _next_summoner);
         emit summoned(_msgSender(), _class, _next_summoner);
         next_summoner++;
@@ -976,31 +978,13 @@ contract rarity is ERC721Enumerable {
         }
     }
 
-    // return image by user class (in separate contract), 
-    // TODO check https://opensea.io/assets/0x2d0ee46b804f415be4dc8aa1040834f5125ebd2e/5496
-    // TODO check https://testnets.opensea.io/assets/0x7dca125b1e805dc88814aed7ccc810f677d3e1db/25
-    function tokenURI(uint256 _summoner) public view override returns (string memory) {
-        string[7] memory parts;
-        parts[0] = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: white; font-family: serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="black" /><text x="10" y="20" class="base">';
+    function baseTokenURI() public view returns (string memory) {
+        return _baseURI();
+    }
 
-        parts[1] = string(abi.encodePacked("class", " ", classes(class[_summoner])));
-
-        parts[2] = '</text><text x="10" y="40" class="base">';
-
-        parts[3] = string(abi.encodePacked("level", " ", toString(level[_summoner])));
-
-        parts[4] = '</text><text x="10" y="60" class="base">';
-
-        parts[5] = string(abi.encodePacked("xp", " ", toString(xp[_summoner]/1e18)));
-
-        parts[6] = '</text></svg>';
-
-        string memory output = string(abi.encodePacked(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
-
-        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "summoner #', toString(_summoner), '", "description": "Rarity is achieved via an active economy, summoners must level, gain feats, learn spells, to be able to craft gear. This allows for market driven rarity while allowing an ever growing economy. Feats, spells, and summoner gear is ommitted as part of further expansions.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))));
-        output = string(abi.encodePacked('data:application/json;base64,', json));
-
-        return output;
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        string memory baseUri = _baseURI();
+        return string(abi.encodePacked(baseUri, tokenId.toString()));
     }
 
     function classes(uint id) public pure returns (string memory description) {

@@ -1,46 +1,54 @@
 # Scarcity
-Scarcity is achieved via an active economy, summoners must level, gain feats, learn spells, to be able to craft gear. This allows for market driven rarity while allowing an ever growing economy.
+The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Adventurer, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.
 
 # Addresses
 
 | Name | Address |
 | :--- | :--- |
-| random | [0x101682Aca42c7793a83596d20dbB77F4782e2ecA](https://polygonscan.com/address/0x101682Aca42c7793a83596d20dbB77F4782e2ecA) |
-| scarcity | [0x4fb729bdb96d735692dcacd9640cf7e3aa859b25](https://polygonscan.com/address/0x4fb729bdb96d735692dcacd9640cf7e3aa859b25) |
-| attributes | [0x3a7c6a0e65480eb32a0ddf1cc2db6563aaed03ce](https://polygonscan.com/address/0x3a7c6a0e65480eb32a0ddf1cc2db6563aaed03ce) |
-| scarcity gold | [0x7303e7a860daffe4d0b33615479648cb3496903b](https://polygonscan.com/address/0x7303e7a860daffe4d0b33615479648cb3496903b) |
-| skills | [0xf740103f4edb85609292472048dc823b5417d9a6](https://polygonscan.com/address/0xf740103f4edb85609292472048dc823b5417d9a6) |
-| craft (I) | [0xef4c8e18c831cb7c937a0d17809102208570ec8f](https://polygonscan.com/address/0xef4c8e18c831cb7c937a0d17809102208570ec8f) |
-| crafting (I) | [0x7d022B9b34eaDC5E7507823EDe459347220EdA5D](https://polygonscan.com/address/0x7d022B9b34eaDC5E7507823EDe459347220EdA5D) |
+| scarcity adventurers | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
+| random | [0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8](https://polygonscan.com/address/0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8) |
+| names | [0xb498A24029E10369d464006e511E3062A29Fa197](https://polygonscan.com/address/0xb498A24029E10369d464006e511E3062A29Fa197) |
+| attributes | [0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5](https://polygonscan.com/address/0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5) |
+| scarcity gold | [0x49Cc4B94DDA8F3b0C9904944199C6eA8A134B3bd](https://polygonscan.com/address/0x49Cc4B94DDA8F3b0C9904944199C6eA8A134B3bd) |
+| skills | [0x639bc6637e4b861C8DED7955b1c715A509Cef99c](https://polygonscan.com/address/0x639bc6637e4b861C8DED7955b1c715A509Cef99c) |
+| craft (I) | [0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2](https://polygonscan.com/address/0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2) |
+| crafting (I) | [0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb](https://polygonscan.com/address/0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb) |
+| feats | [0x441307912B7818f2cBfF049390D908902d9f7D93](https://polygonscan.com/address/0x441307912B7818f2cBfF049390D908902d9f7D93) |
 
 # Codex
 
 | Name | Address |
 | :--- | :--- |
-| skills | [0xD62e9039AA2029f9F3eBE66E235213dD9a338EB8](https://polygonscan.com/address/0xd62e9039aa2029f9f3ebe66e235213dd9a338eb8) |
-| class skills | [0x09966cce97ac54683d8fce2958d4a548e57467f6](https://polygonscan.com/address/0x09966cce97ac54683d8fce2958d4a548e57467f6) |
-| feats-1 | [0x2371ada21cc0c51443114a701fa29a551766fffc](https://polygonscan.com/address/0x2371ada21cc0c51443114a701fa29a551766fffc) |
-| Items (Goods) | [0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad](https://polygonscan.com/address/0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad) |
-| Items (Armor) | [0x4976373A1528476b252451E2E096269b8B4De1Cf](https://polygonscan.com/address/0x4976373A1528476b252451E2E096269b8B4De1Cf) |
-| Items (Weapons) | [0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62](https://polygonscan.com/address/0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62) |
+| skills | [0xc62AE30b8B9F549869B67a90727d36bF55B6Ae3B](https://polygonscan.com/address/0xc62AE30b8B9F549869B67a90727d36bF55B6Ae3B) |
+| class skills | [0xF4130A1a741a8c491fd62CE07Fa9eA3709Eb2116](https://polygonscan.com/address/0xF4130A1a741a8c491fd62CE07Fa9eA3709Eb2116) |
+| feats-1 | [0xdCc86D5Aac90f34bABaE79bF21cA40704459710d](https://polygonscan.com/address/0xdCc86D5Aac90f34bABaE79bF21cA40704459710d) |
+| feats-2 | [0x3828007961C9cE4a3f3c8a11C96e37fb2BB74B0f](https://polygonscan.com/address/0x3828007961C9cE4a3f3c8a11C96e37fb2BB74B0f) |
+| Items (Goods) | [0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8](https://polygonscan.com/address/0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8) |
+| Items (Armor) | [0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B](https://polygonscan.com/address/0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B) |
+| Items (Weapons) | [0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82](https://polygonscan.com/address/0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82) |
+| Gambits | [0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f](https://polygonscan.com/address/0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f) |
 
 # Wrappers
 
 | Name | Address |
 | :--- | :--- |
-| wrapped scarcity gold| [0x4f0D9adEc72551f02ec5A7A87381C84397F343c3](https://polygonscan.com/address/0x4f0D9adEc72551f02ec5A7A87381C84397F343c3) |
+| wrapped scarcity gold| [0x7806ca3f31EaC63b3AA79B5979d29CD0f8258191](https://polygonscan.com/address/0x7806ca3f31EaC63b3AA79B5979d29CD0f8258191) |
 
 # 3rd Party
 
 | Name | Address |
 | :--- | :--- |
-| adventure time | [0xeAAe5c3C28A468E3dB4B044B2Bc2Dc1403638163](https://polygonscan.com/address/0xeAAe5c3C28A468E3dB4B044B2Bc2Dc1403638163) |
-| daycare manager | [0xEDB8B4B6c0223dC91326f0F886CCc7FF6f5135a3](https://polygonscan.com/address/0xEDB8B4B6c0223dC91326f0F886CCc7FF6f5135a3) |
+| adventure time | [0x45298cdbd5e128c21B1D3bE99d3AC082334460aD](https://polygonscan.com/address/0x45298cdbd5e128c21B1D3bE99d3AC082334460aD) |
+| daycare manager | [0xbfBe30F37C721b93d38742A84f6B5481D39003Ba](https://polygonscan.com/address/0xbfBe30F37C721b93d38742A84f6B5481D39003Ba) |
+| library | [0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e](https://polygonscan.com/address/0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e) |
+| proxy admin | [0x820A39DF28743047A09efCC4F540BB5A011fc143](https://polygonscan.com/address/0x820A39DF28743047A09efCC4F540BB5A011fc143) |
+| market logic | [0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1](https://polygonscan.com/address/0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1) |
+| proxy market | [0xD6c519060D4d799397839eac9788b066c96B5703](https://polygonscan.com/address/0xD6c519060D4d799397839eac9788b066c96B5703) |
 
 # Links
 
-[https://scarcity.gold/](https://scarcity.gold)
-[https://scarcity.game/](coming soon)
+[scarcity.game](https://scarcity.game)
+[names.scarcity.game](https://names.scarcity.game)
 
 # Social
 
