@@ -1,11 +1,11 @@
-# Scarcity
-The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Adventurer, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.
+# Rarity
+The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Summoner, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.
 
 # Addresses
 
 | Name | Address |
 | :--- | :--- |
-| scarcity adventurers | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
+| rarity summoners | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
 | random | [0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8](https://polygonscan.com/address/0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8) |
 | names | [0xb498A24029E10369d464006e511E3062A29Fa197](https://polygonscan.com/address/0xb498A24029E10369d464006e511E3062A29Fa197) |
 | attributes | [0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5](https://polygonscan.com/address/0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5) |
