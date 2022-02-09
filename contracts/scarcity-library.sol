@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-import "hardhat/console.sol";
-
 /**
  * @dev Interface of the ERC165 standard, as defined in the
  * https://eips.ethereum.org/EIPS/eip-165[EIP].
@@ -427,6 +425,7 @@ interface codex_items_weapons {
     function item_by_id(uint _id) external pure returns(weapon memory _weapon);
 }
 
+
 interface feats {
     function get_feats_by_id(uint _summoner) external view returns (uint[] memory _feats);
     function feat_by_id(uint _id) external view returns (
@@ -439,7 +438,6 @@ interface feats {
         string memory benefit
     );
 }
-
 
 contract rarity_library {
     using Strings for uint;
