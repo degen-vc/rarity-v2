@@ -1,10 +1,10 @@
-const WGold = artifacts.require("wrapped_scarcity_gold.sol")
+const WGold = artifacts.require("wrapped_rarity_gold.sol")
 
 module.exports = async (deployer, network, accounts) => {
   await deployer.deploy(WGold);
   const wgold = await WGold.deployed();
   console.log(wgold.address);
-  pausePromise('wrapped_scarcity_gold')
+  pausePromise('wrapped_rarity_gold')
 
 }
 

@@ -14,8 +14,8 @@ interface names_v3 {
 }
 
 contract GoldV2 is Ownable {
-    string public constant name = "Scarcity Gold";
-    string public constant symbol = "SGOLD";
+    string public constant name = "Rarity 2 Gold";
+    string public constant symbol = "RTYGOLD";
     uint256 public constant decimals = 18;
 
     uint256 public totalSupply;

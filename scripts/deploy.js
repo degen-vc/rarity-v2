@@ -77,7 +77,7 @@ async function main() {
   const crafting = await Crafting.deploy(scarcity.address, attributes.address, materials.address, gold.address, skills.address, codex_base_random.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address);
   await crafting.deployed();
 
-  const Wrapped_gold = await hardhat.ethers.getContractFactory('contracts/wgold.sol:wrapped_scarcity_gold');
+  const Wrapped_gold = await hardhat.ethers.getContractFactory('contracts/wgold.sol:wrapped_rarity_gold');
   const wrapped_gold = await Wrapped_gold.deploy(scarcity.address, gold.address);
   await wrapped_gold.deployed();
 
