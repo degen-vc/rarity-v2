@@ -32,7 +32,7 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 
 | Name | Address |
 | :--- | :--- |
-| wrapped scarcity gold| [0x7806ca3f31EaC63b3AA79B5979d29CD0f8258191](https://polygonscan.com/address/0x7806ca3f31EaC63b3AA79B5979d29CD0f8258191) |
+| wrapped scarcity gold| [0x07ff88589262F3f2D3090B79f7B7A00165dd4585](https://polygonscan.com/address/0x07ff88589262F3f2D3090B79f7B7A00165dd4585) |
 
 # 3rd Party
 
@@ -41,9 +41,9 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 | adventure time | [0x45298cdbd5e128c21B1D3bE99d3AC082334460aD](https://polygonscan.com/address/0x45298cdbd5e128c21B1D3bE99d3AC082334460aD) |
 | daycare manager | [0xbfBe30F37C721b93d38742A84f6B5481D39003Ba](https://polygonscan.com/address/0xbfBe30F37C721b93d38742A84f6B5481D39003Ba) |
 | library | [0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e](https://polygonscan.com/address/0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e) |
-| proxy admin | [0x820A39DF28743047A09efCC4F540BB5A011fc143](https://polygonscan.com/address/0x820A39DF28743047A09efCC4F540BB5A011fc143) |
-| market logic | [0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1](https://polygonscan.com/address/0x4F539d054CF7BFe35Acb276BFC763782d7ee86d1) |
-| proxy market | [0xD6c519060D4d799397839eac9788b066c96B5703](https://polygonscan.com/address/0xD6c519060D4d799397839eac9788b066c96B5703) |
+| proxy admin | [0x9E0c48CA0Cf4791F505e7d249684a6a08eC4238C](https://polygonscan.com/address/0x9E0c48CA0Cf4791F505e7d249684a6a08eC4238C) |
+| market logic | [0x8e0ee499b7798C166215ce3095aC869AF301Ca4B](https://polygonscan.com/address/0x8e0ee499b7798C166215ce3095aC869AF301Ca4B) |
+| proxy market | [0x8Ce40c544a259FE2FCdB62e2587D504AB111d708](https://polygonscan.com/address/0x8Ce40c544a259FE2FCdB62e2587D504AB111d708) |
 
 # Links
 
