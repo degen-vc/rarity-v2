@@ -89,7 +89,7 @@ async function main() {
   const daycare_manager = await Daycare_manager.deploy(adventure_time.address);
   await daycare_manager.deployed();
   
-  const Library = await hardhat.ethers.getContractFactory('contracts/scarcity-library.sol:rarity_library');
+  const Library = await hardhat.ethers.getContractFactory('contracts/rarity2-library.sol:rarity_library');
   const library = await Library.deploy(scarcity.address, attributes.address, skills.address, gold.address, materials.address, crafting.address, namesV3.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address, feats.address);
   await library.deployed();
 

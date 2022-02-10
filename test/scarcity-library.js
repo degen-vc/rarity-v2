@@ -2,7 +2,7 @@ const Ganache = require('./helpers/ganache');
 const { expect, use } = require('chai');
 const { utils } = require('ethers');
 
-describe('scarcity-library', function() {
+describe('rarity2-library', function() {
   const ganache = new Ganache();
 
   let accounts;
@@ -72,7 +72,7 @@ describe('scarcity-library', function() {
     const Feats = await ethers.getContractFactory('contracts/core/feats.sol:rarity_feats');
     feats = await Feats.deploy(scarcity.address, codex_feats_1.address, codex_feats_2.address);
 
-    const Library = await ethers.getContractFactory('contracts/scarcity-library.sol:rarity_library');
+    const Library = await ethers.getContractFactory('contracts/rarity2-library.sol:rarity_library');
     library = await Library.deploy(scarcity.address, attributes.address, skills.address, gold.address, materials.address, crafting.address, names.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address, feats.address);
 
     await ganache.snapshot();
