@@ -1,11 +1,38 @@
-# Scarcity
-The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Scarcity is increasingly a watchword for that which has value. Choose your Adventurer, engage in economic activity of provably rare assets, and be part of the Scarcity Metaverse.
+# Rarity
+The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Rarity is increasingly a watchword for that which has value. Choose your Summoner, engage in economic activity of provably rare assets, and be part of the Rarity Metaverse.
+
+# Test addresses (Fantom Mainnet)
+
+| Name | Address |
+| :--- | :--- |
+| rarity summoners | [0x60A995CEbCD44CA566Ae22A9666ed28c67B598A1](https://ftmscan.com/address/0x60a995cebcd44ca566ae22a9666ed28c67b598a1) |
+| random | [0xDc8d7ce4fcBC441cf8C376fE840E9cc18A9344FF](https://ftmscan.com/address/0xDc8d7ce4fcBC441cf8C376fE840E9cc18A9344FF) |
+| names v3 | [0xEF4C8E18c831cB7C937A0D17809102208570eC8F](https://ftmscan.com/address/0xEF4C8E18c831cB7C937A0D17809102208570eC8F) |
+| attributes | [0x4f0D9adEc72551f02ec5A7A87381C84397F343c3](https://ftmscan.com/address/0x4f0D9adEc72551f02ec5A7A87381C84397F343c3) |
+| rarity 2 gold | [0xB109978CFB7973AB5c8807258b313887Bba31E71](https://ftmscan.com/address/0xB109978CFB7973AB5c8807258b313887Bba31E71) |
+| wrapped rarity 2 gold | [0xB109978CFB7973AB5c8807258b313887Bba31E71](https://ftmscan.com/address/0xB109978CFB7973AB5c8807258b313887Bba31E71) |
+| skills | [0xf740103f4eDB85609292472048Dc823b5417D9a6](https://ftmscan.com/address/0xf740103f4eDB85609292472048Dc823b5417D9a6) |
+| craft (I) | [0x9856528af0C4B7a74BE016c7df82E6AcCCED4c93](https://ftmscan.com/address/0x9856528af0C4B7a74BE016c7df82E6AcCCED4c93) |
+| crafting (I) | [0xc8B7d45614e255eC964968e6AC6e7bdCa100E418](https://ftmscan.com/address/0xc8B7d45614e255eC964968e6AC6e7bdCa100E418) |
+| feats | [0x22f9e5350854818b94215b1A55d5bb71c1924D93](https://ftmscan.com/address/0x22f9e5350854818b94215b1A55d5bb71c1924D93) |
+| codex |
+| codex skills | [0x60a199e418d9F5522533ed519bb91FDC94579D83](https://ftmscan.com/address/0x60a199e418d9F5522533ed519bb91FDC94579D83) |
+| codex class skills | [0xDd4cA39ef85B63A4CE84e0e5204163442945CaD8](https://ftmscan.com/address/0x60a199e418d9F5522533ed519bb91FDC94579D83) |
+| codex items goods | [0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED](https://ftmscan.com/address/0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED) |
+| codex items armor | [0x101682Aca42c7793a83596d20dbB77F4782e2ecA](https://ftmscan.com/address/0x101682Aca42c7793a83596d20dbB77F4782e2ecA) |
+| codex items weapons | [0x4976373A1528476b252451E2E096269b8B4De1Cf](https://ftmscan.com/address/0x4976373A1528476b252451E2E096269b8B4De1Cf) |
+| codex feats 1 | [0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad](https://ftmscan.com/address/0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad) |
+| codex feats 2 | [0x7d022B9b34eaDC5E7507823EDe459347220EdA5D](https://ftmscan.com/address/0x7d022B9b34eaDC5E7507823EDe459347220EdA5D) |
+| codex gambits | [0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62](https://ftmscan.com/address/0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62) |
+| adventure time | [0x3794b14d06F4C63F75dbA66b85e3802B4048fE91](https://ftmscan.com/address/0x3794b14d06F4C63F75dbA66b85e3802B4048fE91) |
+| daycare manager | [0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15](https://ftmscan.com/address/0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15) | 
+| library | [0x2755756A13D90bae86e56DAbD7dB35F980E10559](https://ftmscan.com/address/0x2755756A13D90bae86e56DAbD7dB35F980E10559) | 
 
 # Addresses
 
 | Name | Address |
 | :--- | :--- |
-| scarcity adventurers | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
+| rarity summoners | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
 | random | [0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8](https://polygonscan.com/address/0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8) |
 | names | [0xb498A24029E10369d464006e511E3062A29Fa197](https://polygonscan.com/address/0xb498A24029E10369d464006e511E3062A29Fa197) |
 | attributes | [0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5](https://polygonscan.com/address/0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5) |

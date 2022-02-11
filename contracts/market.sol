@@ -66,7 +66,7 @@ contract RarityManifestedMarket is Ownable {
         require(!s.paused, "Market is already paused");
         require(
             RMTokens.ownerOf(tokenID) == msg.sender,
-            "Adventurer is not yours"
+            "Summoner is not yours"
         );
 
         uint256 payout = price - ((price * s.fee) / 100);
@@ -108,7 +108,7 @@ contract RarityManifestedMarket is Ownable {
         Item memory item = s.listings[listId];
 
         require(msg.value == item.price, "wrong value");
-        require(item.status == Status.LISTED, "adventurer not listed");
+        require(item.status == Status.LISTED, "summoner not listed");
 
         item.status = Status.SOLD;
         item.buyer = msg.sender;

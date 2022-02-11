@@ -19,8 +19,8 @@ contract NamesV3 is Ownable {
   uint256 public next_name_id = 1;
 
   rarity_manifested immutable rm;
-  
-  IERC20 public buyToken;  
+
+  IERC20 public buyToken;
   uint256 public buyTokenPrice;
   // after finalized = true, buyToken and buyTokenPrice can't be updated by owner
   bool public finalized;
@@ -34,7 +34,7 @@ contract NamesV3 is Ownable {
   event NameUpdated(uint256 indexed name_id, string old_name, string new_name);
 
   constructor(
-    rarity_manifested _rarity_manifested, 
+    rarity_manifested _rarity_manifested,
     IERC20 _buyToken,
     uint256 _buyTokenPrice
   ) {
@@ -56,14 +56,14 @@ contract NamesV3 is Ownable {
     require(validate_name(name), 'invalid name');
     string memory lower_name = to_lower(name);
     require(!_is_name_claimed[lower_name], 'name taken');
-    
+
     buyToken.safeTransferFrom(msg.sender, address(this), buyTokenPrice);
 
     name_id = next_name_id;
     next_name_id++;
     names[name_id] = name;
     _is_name_claimed[lower_name] = true;
-    
+
     summoner_to_name_id[summoner] = name_id;
     name_id_to_summoner[name_id] = summoner;
 
@@ -98,7 +98,7 @@ contract NamesV3 is Ownable {
         output = string(abi.encodePacked(output, "Level ", toString(rm.level(summoner)), ' ', rm.classes(rm.class(summoner)), '</text><text x="10" y="40" class="base">'));
     }
     output = string(abi.encodePacked(output, names[name_id], '</text></svg>'));
-    output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Scarcity ERC721 names for adventurers.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
+    output = string(abi.encodePacked('data:application/json;base64,', Base64.encode(bytes(string(abi.encodePacked('{"name": "', names[name_id], '", "description": "Rarity 2 ERC721 names for summoners.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))))));
   }
 
   // --- Internal View functions ---
@@ -190,11 +190,15 @@ contract NamesV3 is Ownable {
   }
 
   // --- Admin functions ---
-  
-  function withdrawFunds(IERC20 token) external onlyOwner {
+
+  function withdrawFunds(IERC20 token, address receiver, uint256 amount) external onlyOwner {
+    token.safeTransfer(receiver, amount);
+  }
+
+  function withdrawAllFunds(IERC20 token, address receiver) external onlyOwner {
     uint256 tokenBalance = token.balanceOf(address(this));
 
-    token.safeTransfer(msg.sender, tokenBalance);
+    token.safeTransfer(receiver, tokenBalance);
   }
 
   function setBuyToken(IERC20 _buyToken) external onlyOwner checkFinalized {

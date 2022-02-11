@@ -469,8 +469,8 @@ contract rarity_crafting is Ownable, ERC721Enumerable {
     codex_items_armor immutable _armor;
     codex_items_weapons immutable _weapons;
     
-    string constant public name = "Scarcity Crafting (I)";
-    string constant public symbol = "SC(I)";
+    string constant public name = "Rarity 2 Crafting (I)";
+    string constant public symbol = "R2C(I)";
 
     event Crafted(address indexed owner, uint check, uint summoner, uint base_type, uint item_type, uint gold, uint craft_i);
 

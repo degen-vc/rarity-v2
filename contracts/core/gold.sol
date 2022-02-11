@@ -10,8 +10,8 @@ interface rarity {
 }
 
 contract rarity_gold is Ownable {
-    string public constant name = "Scarcity Gold";
-    string public constant symbol = "SGOLD";
+    string public constant name = "Rarity 2 Gold";
+    string public constant symbol = "RGGOLD";
     uint8 public constant decimals = 18;
 
     uint public totalSupply = 0;

@@ -53,7 +53,7 @@ describe('marketWithProxy', function() {
     const Crafting = await ethers.getContractFactory('contracts/core/rarity_crafting_common.sol:rarity_crafting');
     crafting = await Crafting.deploy(scarcity.address, attributes.address, materials.address, gold.address, skills.address, codex_base_random.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address);
 
-    const Wrapped_gold = await ethers.getContractFactory('contracts/wgold.sol:wrapped_scarcity_gold');
+    const Wrapped_gold = await ethers.getContractFactory('contracts/wgold.sol:wrapped_rarity_gold');
     wrapped_gold = await Wrapped_gold.deploy(scarcity.address, gold.address);
 
     const ProxyAdmin = await ethers.getContractFactory('contracts/market/ProxyAdmin.sol:ProxyAdminImpl');

@@ -77,7 +77,7 @@ async function main() {
   const crafting = await Crafting.deploy(scarcity.address, attributes.address, materials.address, gold.address, skills.address, codex_base_random.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address);
   await crafting.deployed();
 
-  const Wrapped_gold = await hardhat.ethers.getContractFactory('contracts/wgold.sol:wrapped_scarcity_gold');
+  const Wrapped_gold = await hardhat.ethers.getContractFactory('contracts/wgold.sol:wrapped_rarity_gold');
   const wrapped_gold = await Wrapped_gold.deploy(scarcity.address, gold.address);
   await wrapped_gold.deployed();
 
@@ -89,7 +89,7 @@ async function main() {
   const daycare_manager = await Daycare_manager.deploy(adventure_time.address);
   await daycare_manager.deployed();
   
-  const Library = await hardhat.ethers.getContractFactory('contracts/scarcity-library.sol:rarity_library');
+  const Library = await hardhat.ethers.getContractFactory('contracts/rarity2-library.sol:rarity_library');
   const library = await Library.deploy(scarcity.address, attributes.address, skills.address, gold.address, materials.address, crafting.address, namesV3.address, codex_items_goods.address, codex_items_armor.address, codex_items_weapons.address, feats.address);
   await library.deployed();
 

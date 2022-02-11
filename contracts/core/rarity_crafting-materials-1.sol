@@ -14,7 +14,7 @@ interface attributes {
 }
 
 contract rarity_crafting_materials {
-    string public constant name = "Scarcity Crafting Materials (I)";
+    string public constant name = "Rarity 2 Crafting Materials (I)";
     string public constant symbol = "Craft (I)";
     uint8 public constant decimals = 18;
 
