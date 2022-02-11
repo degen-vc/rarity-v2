@@ -17,16 +17,16 @@ The world is being swamped by unlimited money printing. Spurred by this, new eco
 | feats | [0x22f9e5350854818b94215b1A55d5bb71c1924D93](https://ftmscan.com/address/0x22f9e5350854818b94215b1A55d5bb71c1924D93) |
 | codex |
 | codex skills | [0x60a199e418d9F5522533ed519bb91FDC94579D83](https://ftmscan.com/address/0x60a199e418d9F5522533ed519bb91FDC94579D83) |
-| codex class skills | [0xDd4cA39ef85B63A4CE84e0e5204163442945CaD8] (https://ftmscan.com/address/0x60a199e418d9F5522533ed519bb91FDC94579D83) |
-| codex items goods | [0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED] (https://ftmscan.com/address/0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED) |
-| codex items armor | [0x101682Aca42c7793a83596d20dbB77F4782e2ecA] (https://ftmscan.com/address/0x101682Aca42c7793a83596d20dbB77F4782e2ecA) |
-| codex items weapons | [0x4976373A1528476b252451E2E096269b8B4De1Cf] (https://ftmscan.com/address/0x4976373A1528476b252451E2E096269b8B4De1Cf) |
-| codex feats 1 | [0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad] (https://ftmscan.com/address/0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad) |
-| codex feats 2 | [0x7d022B9b34eaDC5E7507823EDe459347220EdA5D] (https://ftmscan.com/address/0x7d022B9b34eaDC5E7507823EDe459347220EdA5D) |
-| codex gambits | [0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62] (https://ftmscan.com/address/0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62) |
-| adventure time | [0x3794b14d06F4C63F75dbA66b85e3802B4048fE91] (https://ftmscan.com/address/0x3794b14d06F4C63F75dbA66b85e3802B4048fE91) |
-| daycare manager | [0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15] (https://ftmscan.com/address/0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15) | 
-| library | [0x2755756A13D90bae86e56DAbD7dB35F980E10559] (https://ftmscan.com/address/0x2755756A13D90bae86e56DAbD7dB35F980E10559) | 
+| codex class skills | [0xDd4cA39ef85B63A4CE84e0e5204163442945CaD8](https://ftmscan.com/address/0x60a199e418d9F5522533ed519bb91FDC94579D83) |
+| codex items goods | [0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED](https://ftmscan.com/address/0x8b2aD88A4cE5cC4e7Cc38Af4878aa05F7084e8ED) |
+| codex items armor | [0x101682Aca42c7793a83596d20dbB77F4782e2ecA](https://ftmscan.com/address/0x101682Aca42c7793a83596d20dbB77F4782e2ecA) |
+| codex items weapons | [0x4976373A1528476b252451E2E096269b8B4De1Cf](https://ftmscan.com/address/0x4976373A1528476b252451E2E096269b8B4De1Cf) |
+| codex feats 1 | [0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad](https://ftmscan.com/address/0xc36400d5EB01dB28EceA220CA1cc9cA7b97171ad) |
+| codex feats 2 | [0x7d022B9b34eaDC5E7507823EDe459347220EdA5D](https://ftmscan.com/address/0x7d022B9b34eaDC5E7507823EDe459347220EdA5D) |
+| codex gambits | [0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62](https://ftmscan.com/address/0xa6E9b54C99545623D0827Be9A786EdeD9b23Bf62) |
+| adventure time | [0x3794b14d06F4C63F75dbA66b85e3802B4048fE91](https://ftmscan.com/address/0x3794b14d06F4C63F75dbA66b85e3802B4048fE91) |
+| daycare manager | [0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15](https://ftmscan.com/address/0xFbf1EfE1A05A0381756a96E181d9504aBa4D5f15) | 
+| library | [0x2755756A13D90bae86e56DAbD7dB35F980E10559](https://ftmscan.com/address/0x2755756A13D90bae86e56DAbD7dB35F980E10559) | 
 
 # Addresses
 
