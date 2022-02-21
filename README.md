@@ -1,6 +1,34 @@
 # Rarity 2
 Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, community governance and optional pay-to-play. Rarity is achieved via an active economy but market-driven rarity is best sustained if the in-game currency supply has parameters that the community controls.
 
+# Production Rarity 2 addresses (Fantom Mainnet)
+
+| Name | Address |
+| :--- | :--- |
+| rarity summoners | [0x3b32294Bc575b5C4C1E86a04B67d33B3F100fC4C](https://ftmscan.com/address/0x3b32294Bc575b5C4C1E86a04B67d33B3F100fC4C) |
+| random | [0x2d206D08dAC64e4546be38aB0CD2895709F60Cc6](https://ftmscan.com/address/0x2d206D08dAC64e4546be38aB0CD2895709F60Cc6) |
+| names v3 | [0x74D16a57149bCbB4AeC84965426F66E258879012](https://ftmscan.com/address/0x74D16a57149bCbB4AeC84965426F66E258879012) |
+| attributes | [0x7e5E4eB92aE9e5E47a04e832d029a2E4186DD750](https://ftmscan.com/address/0x7e5E4eB92aE9e5E47a04e832d029a2E4186DD750) |
+| rarity 2 gold | [0xFE7FAE6182C2E93f45D867D5De63aF15802E994a](https://ftmscan.com/address/0xFE7FAE6182C2E93f45D867D5De63aF15802E994a) |
+| wrapped rarity 2 gold | [0xE00CBc6dEabdE185ED8d9C43856F89A6C7B280da](https://ftmscan.com/address/0xE00CBc6dEabdE185ED8d9C43856F89A6C7B280da) |
+| skills | [0x23B036e2c0E79aA83339Ff8abb37D68054b3E357](https://ftmscan.com/address/0x23B036e2c0E79aA83339Ff8abb37D68054b3E357) |
+| craft (I) | [0x2D096Adf257Dc95Fb46D2d49753708547975172E](https://ftmscan.com/address/0x2D096Adf257Dc95Fb46D2d49753708547975172E) |
+| crafting (I) | [0x2617fb7eCE256b105151Eee2a573b024AB37A147](https://ftmscan.com/address/0x2617fb7eCE256b105151Eee2a573b024AB37A147) |
+| feats | [0x74B5978d58fAd6A92372E6867596097B8F209bc6](https://ftmscan.com/address/0x74B5978d58fAd6A92372E6867596097B8F209bc6) |
+| codex |
+| codex skills | [0xEC5B564c467277A9DCdFF3FC8959E76E285D33Bf](https://ftmscan.com/address/0xEC5B564c467277A9DCdFF3FC8959E76E285D33Bf) |
+| codex class skills | [0x407B790B0CCc8082C15C6E513622206Eb9a6d46c](https://ftmscan.com/address/0x407B790B0CCc8082C15C6E513622206Eb9a6d46c) |
+| codex items goods | [0xD7FfEFd8E534Ee24EbF5a98a430e670844AcF6f3](https://ftmscan.com/address/0xD7FfEFd8E534Ee24EbF5a98a430e670844AcF6f3) |
+| codex items armor | [0xa5a126c4358f26528e0653E36E9A3DFc19F3de65](https://ftmscan.com/address/0xa5a126c4358f26528e0653E36E9A3DFc19F3de65) |
+| codex items weapons | [0x95464E6F84dE77827844b5b93767BbF996A4679d](https://ftmscan.com/address/0x95464E6F84dE77827844b5b93767BbF996A4679d) |
+| codex feats 1 | [0xA52f52889a0B1430B608e993BF2c4d2A92d6493C](https://ftmscan.com/address/0xA52f52889a0B1430B608e993BF2c4d2A92d6493C) |
+| codex feats 2 | [0x749CB7d5FCe62048309081bFC3F5A45F46f18DdE](https://ftmscan.com/address/0x749CB7d5FCe62048309081bFC3F5A45F46f18DdE) |
+| codex gambits | [0x7760eB40C2C1a2b1253c65385D8Ba6A67A285425](https://ftmscan.com/address/0x7760eB40C2C1a2b1253c65385D8Ba6A67A285425) |
+| adventure time | [0x5ac1A41f17727e4428449eD53e851e2DD717b547](https://ftmscan.com/address/0x5ac1A41f17727e4428449eD53e851e2DD717b547) |
+| daycare manager | [0x88F1107890aF8D9a35b45CC4068120b376DcB94D](https://ftmscan.com/address/0x88F1107890aF8D9a35b45CC4068120b376DcB94D) | 
+| library | [0x7a1a511f0faBB7BAc46185B612A250f108d4d103](https://ftmscan.com/address/0x7a1a511f0faBB7BAc46185B612A250f108d4d103) | 
+
+
 # Test addresses (Fantom Mainnet)
 
 | Name | Address |
@@ -28,54 +56,10 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 | daycare manager | [0xd846FE49DB6A39807D6e9ee72458801D3674C442](https://ftmscan.com/address/0xd846FE49DB6A39807D6e9ee72458801D3674C442) | 
 | library | [0x6055890534024312edd95c2B1b6D52c245E536a3](https://ftmscan.com/address/0x6055890534024312edd95c2B1b6D52c245E536a3) | 
 
-# Addresses
-
-| Name | Address |
-| :--- | :--- |
-| rarity summoners | [0x44c37Eef72F5C141fa95896030BC6c0A0c16325B](https://polygonscan.com/address/0x44c37Eef72F5C141fa95896030BC6c0A0c16325B) |
-| random | [0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8](https://polygonscan.com/address/0x8E9094cF498361F9C25C0A78eBcB580ba2060dD8) |
-| names | [0xb498A24029E10369d464006e511E3062A29Fa197](https://polygonscan.com/address/0xb498A24029E10369d464006e511E3062A29Fa197) |
-| attributes | [0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5](https://polygonscan.com/address/0x9e2f4677b48ebE83F70Cf9EfD32bAE98CAa9faf5) |
-| scarcity gold | [0x49Cc4B94DDA8F3b0C9904944199C6eA8A134B3bd](https://polygonscan.com/address/0x49Cc4B94DDA8F3b0C9904944199C6eA8A134B3bd) |
-| skills | [0x639bc6637e4b861C8DED7955b1c715A509Cef99c](https://polygonscan.com/address/0x639bc6637e4b861C8DED7955b1c715A509Cef99c) |
-| craft (I) | [0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2](https://polygonscan.com/address/0xd5F4eb828197AAed6089BFF3580184BFbf772Dc2) |
-| crafting (I) | [0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb](https://polygonscan.com/address/0x4DC7c7E689b52d217Ce4D5664aD14C5089A9EfBb) |
-| feats | [0x441307912B7818f2cBfF049390D908902d9f7D93](https://polygonscan.com/address/0x441307912B7818f2cBfF049390D908902d9f7D93) |
-
-# Codex
-
-| Name | Address |
-| :--- | :--- |
-| skills | [0xc62AE30b8B9F549869B67a90727d36bF55B6Ae3B](https://polygonscan.com/address/0xc62AE30b8B9F549869B67a90727d36bF55B6Ae3B) |
-| class skills | [0xF4130A1a741a8c491fd62CE07Fa9eA3709Eb2116](https://polygonscan.com/address/0xF4130A1a741a8c491fd62CE07Fa9eA3709Eb2116) |
-| feats-1 | [0xdCc86D5Aac90f34bABaE79bF21cA40704459710d](https://polygonscan.com/address/0xdCc86D5Aac90f34bABaE79bF21cA40704459710d) |
-| feats-2 | [0x3828007961C9cE4a3f3c8a11C96e37fb2BB74B0f](https://polygonscan.com/address/0x3828007961C9cE4a3f3c8a11C96e37fb2BB74B0f) |
-| Items (Goods) | [0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8](https://polygonscan.com/address/0xF0DF8b45Ecc52eC2caA7c15C8aeD5b7eadDF13c8) |
-| Items (Armor) | [0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B](https://polygonscan.com/address/0xe5B2C37E8142b312334f49D6CC4a2e564dA1a35B) |
-| Items (Weapons) | [0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82](https://polygonscan.com/address/0x2FF4d115dF05a1ff0f2e0C67Ffa708BF8Ab2DB82) |
-| Gambits | [0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f](https://polygonscan.com/address/0x9Ca1908482b10F461712fe98E5eC4EEB30Ab273f) |
-
-# Wrappers
-
-| Name | Address |
-| :--- | :--- |
-| wrapped scarcity gold| [0x07ff88589262F3f2D3090B79f7B7A00165dd4585](https://polygonscan.com/address/0x07ff88589262F3f2D3090B79f7B7A00165dd4585) |
-
-# 3rd Party
-
-| Name | Address |
-| :--- | :--- |
-| adventure time | [0x45298cdbd5e128c21B1D3bE99d3AC082334460aD](https://polygonscan.com/address/0x45298cdbd5e128c21B1D3bE99d3AC082334460aD) |
-| daycare manager | [0xbfBe30F37C721b93d38742A84f6B5481D39003Ba](https://polygonscan.com/address/0xbfBe30F37C721b93d38742A84f6B5481D39003Ba) |
-| library | [0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e](https://polygonscan.com/address/0x9B43AAD058967aB21ff6E0427E6f430aaE08bf8e) |
-| proxy admin | [0x9E0c48CA0Cf4791F505e7d249684a6a08eC4238C](https://polygonscan.com/address/0x9E0c48CA0Cf4791F505e7d249684a6a08eC4238C) |
-| market logic | [0x8e0ee499b7798C166215ce3095aC869AF301Ca4B](https://polygonscan.com/address/0x8e0ee499b7798C166215ce3095aC869AF301Ca4B) |
-| proxy market | [0x8Ce40c544a259FE2FCdB62e2587D504AB111d708](https://polygonscan.com/address/0x8Ce40c544a259FE2FCdB62e2587D504AB111d708) |
 
 # Links
 
-[scarcity.game](https://scarcity.game)
-[names.scarcity.game](https://names.scarcity.game)
+[rarity.gold](https://rarity.gold)
 
 # Social
 
