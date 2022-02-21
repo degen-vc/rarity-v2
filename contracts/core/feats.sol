@@ -165,7 +165,7 @@ contract rarity_feats {
     }
 
     function select_feat(uint _summoner, uint _feat) external {
-        require(_isApprovedOrOwner(_summoner), "!summoner");
+        require(_isApprovedOrOwner(_summoner), "!adventurer");
         require(is_valid(_feat), "!feat");
         uint _class = _rm.class(_summoner);
         uint _level = _rm.level(_summoner);

@@ -1,5 +1,5 @@
-# Rarity
-The world is being swamped by unlimited money printing. Spurred by this, new economic stores of value are rising. New places of value are also emerging also not in the physical world but in the virtual. Rarity is increasingly a watchword for that which has value. Choose your Summoner, engage in economic activity of provably rare assets, and be part of the Rarity Metaverse.
+# Rarity 2
+Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, community governance and optional pay-to-play. Rarity is achieved via an active economy but market-driven rarity is best sustained if the in-game currency supply has parameters that the community controls.
 
 # Test addresses (Fantom Mainnet)
 

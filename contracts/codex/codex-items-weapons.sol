@@ -747,7 +747,7 @@ contract codex {
         _weapon.critical = 2;
         _weapon.critical_modifier = -1;
         _weapon.range_increment = 0;
-        _weapon.description = "Summoners recognize the greatsword as one of the best melee weapons available. It's reliable and powerful.";
+        _weapon.description = "Adventurers recognize the greatsword as one of the best melee weapons available. It's reliable and powerful.";
     }
 
     function guisarme() public pure returns (weapon memory _weapon) {

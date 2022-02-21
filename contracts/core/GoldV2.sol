@@ -15,7 +15,7 @@ interface names_v3 {
 
 contract GoldV2 is Ownable {
     string public constant name = "Rarity 2 Gold";
-    string public constant symbol = "RGGOLD";
+    string public constant symbol = "RG";
     uint256 public constant decimals = 18;
 
     uint256 public totalSupply;
@@ -43,7 +43,7 @@ contract GoldV2 is Ownable {
 
     // only named summoners can claim
     modifier canClaim(uint256 summoner) {
-        require(names.summoner_to_name_id(summoner) > 0, "summoner doesn't have name");
+        require(names.summoner_to_name_id(summoner) > 0, "adventurer doesn't have name");
         _;
     }
 

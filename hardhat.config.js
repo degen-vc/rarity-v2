@@ -3,7 +3,7 @@ require("@nomiclabs/hardhat-etherscan");
 require("dotenv").config();
 require("hardhat-gas-reporter");
 
-const {PRIVATE_KEY, POLYGONSCAN_API_KEY} = process.env;
+const {PRIVATE_KEY, POLYGONSCAN_API_KEY, MORALIS_FTM} = process.env;
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -21,6 +21,14 @@ module.exports = {
       url: `https://rpc-mumbai.maticvigil.com/`,
       accounts: [PRIVATE_KEY]
     },
+    ftm_Testnet: {
+      url: `https://rpc.testnet.fantom.network/`,
+      accounts: [PRIVATE_KEY]
+    },
+    ftm_Mainnet: {
+      url: `https://speedy-nodes-nyc.moralis.io/${MORALIS_FTM}/fantom/mainnet`,
+      accounts: [PRIVATE_KEY]
+    }
   },
   solidity: {
     version: "0.8.7",
