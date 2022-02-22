@@ -28,6 +28,13 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 | daycare manager | [0x88F1107890aF8D9a35b45CC4068120b376DcB94D](https://ftmscan.com/address/0x88F1107890aF8D9a35b45CC4068120b376DcB94D) | 
 | library | [0x7a1a511f0faBB7BAc46185B612A250f108d4d103](https://ftmscan.com/address/0x7a1a511f0faBB7BAc46185B612A250f108d4d103) | 
 
+# Rarity 2 token addresses (Fantom Mainnet)
+
+| Name | Address |
+| :-- | :-- |
+| Rarity 2 Gameverse rarity.gold (RGV) | [0x2fC49294398486f50302b7F1cDdd1eFdC7F9785C](https://ftmscan.com/address/0x2fC49294398486f50302b7F1cDdd1eFdC7F9785C) |
+| Rarity 2 LP | [0xfB6C25b4253bB67c1590d103EF0688d128750dA7](https://ftmscan.com/address/0x7a1a511f0faBB7BAc46185B612A250f108d4d103) |
+
 
 # Test addresses (Fantom Mainnet)
 
