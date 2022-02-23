@@ -3,6 +3,7 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 
 # Production Rarity 2 addresses (Fantom Mainnet)
 
+## Core
 | Name | Address |
 | :--- | :--- |
 | rarity summoners | [0x3b32294Bc575b5C4C1E86a04B67d33B3F100fC4C](https://ftmscan.com/address/0x3b32294Bc575b5C4C1E86a04B67d33B3F100fC4C) |
@@ -15,7 +16,10 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 | craft (I) | [0x2D096Adf257Dc95Fb46D2d49753708547975172E](https://ftmscan.com/address/0x2D096Adf257Dc95Fb46D2d49753708547975172E) |
 | crafting (I) | [0x2617fb7eCE256b105151Eee2a573b024AB37A147](https://ftmscan.com/address/0x2617fb7eCE256b105151Eee2a573b024AB37A147) |
 | feats | [0x74B5978d58fAd6A92372E6867596097B8F209bc6](https://ftmscan.com/address/0x74B5978d58fAd6A92372E6867596097B8F209bc6) |
-| codex |
+
+## Codex
+| Name | Address |
+| :--- | :--- |
 | codex skills | [0xEC5B564c467277A9DCdFF3FC8959E76E285D33Bf](https://ftmscan.com/address/0xEC5B564c467277A9DCdFF3FC8959E76E285D33Bf) |
 | codex class skills | [0x407B790B0CCc8082C15C6E513622206Eb9a6d46c](https://ftmscan.com/address/0x407B790B0CCc8082C15C6E513622206Eb9a6d46c) |
 | codex items goods | [0xD7FfEFd8E534Ee24EbF5a98a430e670844AcF6f3](https://ftmscan.com/address/0xD7FfEFd8E534Ee24EbF5a98a430e670844AcF6f3) |
@@ -24,6 +28,10 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 | codex feats 1 | [0xA52f52889a0B1430B608e993BF2c4d2A92d6493C](https://ftmscan.com/address/0xA52f52889a0B1430B608e993BF2c4d2A92d6493C) |
 | codex feats 2 | [0x749CB7d5FCe62048309081bFC3F5A45F46f18DdE](https://ftmscan.com/address/0x749CB7d5FCe62048309081bFC3F5A45F46f18DdE) |
 | codex gambits | [0x7760eB40C2C1a2b1253c65385D8Ba6A67A285425](https://ftmscan.com/address/0x7760eB40C2C1a2b1253c65385D8Ba6A67A285425) |
+
+## 3rd Party
+| Name | Address |
+| :--- | :--- |
 | adventure time | [0x5ac1A41f17727e4428449eD53e851e2DD717b547](https://ftmscan.com/address/0x5ac1A41f17727e4428449eD53e851e2DD717b547) |
 | daycare manager | [0x88F1107890aF8D9a35b45CC4068120b376DcB94D](https://ftmscan.com/address/0x88F1107890aF8D9a35b45CC4068120b376DcB94D) | 
 | library | [0x7a1a511f0faBB7BAc46185B612A250f108d4d103](https://ftmscan.com/address/0x7a1a511f0faBB7BAc46185B612A250f108d4d103) | 
