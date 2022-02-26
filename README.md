@@ -10,8 +10,8 @@ Welcome to Rarity 2, an implementation of Andre Cronje's Rarity with rare gold, 
 | random | [0x2d206D08dAC64e4546be38aB0CD2895709F60Cc6](https://ftmscan.com/address/0x2d206D08dAC64e4546be38aB0CD2895709F60Cc6) |
 | names v3 | [0x74D16a57149bCbB4AeC84965426F66E258879012](https://ftmscan.com/address/0x74D16a57149bCbB4AeC84965426F66E258879012) |
 | attributes | [0x7e5E4eB92aE9e5E47a04e832d029a2E4186DD750](https://ftmscan.com/address/0x7e5E4eB92aE9e5E47a04e832d029a2E4186DD750) |
-| rarity 2 gold | [0xFE7FAE6182C2E93f45D867D5De63aF15802E994a](https://ftmscan.com/address/0xFE7FAE6182C2E93f45D867D5De63aF15802E994a) |
-| wrapped rarity 2 gold | [0xE00CBc6dEabdE185ED8d9C43856F89A6C7B280da](https://ftmscan.com/address/0xE00CBc6dEabdE185ED8d9C43856F89A6C7B280da) |
+| rarity 2 gold | [0x4471AdDcEa066c6C57101e686e8faD34a881F206](https://ftmscan.com/address/0x4471AdDcEa066c6C57101e686e8faD34a881F206) |
+| wrapped rarity 2 gold | [0xe00cbc6deabde185ed8d9c43856f89a6c7b280da](https://ftmscan.com/address/0xe00cbc6deabde185ed8d9c43856f89a6c7b280da) |
 | skills | [0x23B036e2c0E79aA83339Ff8abb37D68054b3E357](https://ftmscan.com/address/0x23B036e2c0E79aA83339Ff8abb37D68054b3E357) |
 | craft (I) | [0x2D096Adf257Dc95Fb46D2d49753708547975172E](https://ftmscan.com/address/0x2D096Adf257Dc95Fb46D2d49753708547975172E) |
 | crafting (I) | [0x2617fb7eCE256b105151Eee2a573b024AB37A147](https://ftmscan.com/address/0x2617fb7eCE256b105151Eee2a573b024AB37A147) |
